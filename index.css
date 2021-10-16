@@ -1,0 +1,91 @@
+.home-main-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.home-main-section .img-wrapper {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.image {
+  background-image: url(images/background.png);
+  flex-grow: 1;
+  max-height: 70vh;
+  min-width: 30vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.home-main-section .slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .home-main-section .img-wrapper {
+    display: none;
+  }
+  .home-main-section {
+    justify-content: center;
+  }
+  .brand-logo-name {
+    display: none;
+  }
+  .container {
+    margin: 1vh;
+    padding: 1vh;
+  }
+}
+
+.home-page-circle-1 {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  bottom: 5vw;
+  left: 5vw;
+  background-color: rgba(216, 112, 147, 0.1);
+  z-index: -1;
+}
+
+.home-page-circle-2 {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  top: 5vw;
+  left: 40vw;
+  background-color: rgba(137, 43, 226, 0.1);
+  z-index: -1;
+}
+
+.home-page-circle-3 {
+  position: absolute;
+  overflow: hidden;
+  width: 30vw;
+  height: 30vw;
+
+  bottom: 0vw;
+  right: 0vw;
+  z-index: -1;
+}
+
+.home-page-circle-3::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(137, 43, 226, 0.1);
+  transform: translate(40%, 40%);
+}
